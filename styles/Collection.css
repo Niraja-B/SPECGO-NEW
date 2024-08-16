@@ -1,0 +1,71 @@
+.collection-container {
+    padding: 2rem; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.collection-heading {
+    font-size: 2rem; /* Size of the heading */
+    margin-bottom: 2rem; /* Space between heading and collection */
+    color: #333; /* Text color */
+}
+
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Reduced gap to fit six boxes in a row */
+    justify-content: center;
+}
+
+.collection-box {
+    width: 180px; /* Increased size */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collection-box:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Optional shadow on hover */
+}
+
+.collection-box img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Increased height */
+    object-fit: cover;
+    border-bottom: 2px solid white; /* Border separating the image and button */
+}
+
+.collection-box span {
+    display: block;
+    font-size: 1rem;
+    background-color: #fff; /* White background for the text */
+    color: black; /* Text color */
+    padding: 0.5rem 0;
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    border: 2px solid white; /* Border matching the image width */
+    border-top: none; /* Remove the top border */
+    margin-top: -2px; /* Slight overlap with the image */
+    width: 100%; /* Make the button match the image width */
+    box-sizing: border-box; /* Ensures the border is included in the element's total width and height */
+    cursor: pointer; /* Cursor pointer to indicate clickability */
+}
+
+.collection-box span:hover {
+    background-color: white; /* Button hover effect */
+    color: black; /* Inverted text color on hover */
+}
+
+/* Media query to ensure six boxes fit in one row on larger screens */
+@media (min-width: 1200px) {
+    .collection {
+        gap: 1rem;
+        justify-content: space-between; /* Adjust the alignment for larger screens */
+    }
+
+    .collection-box {
+        flex-basis: calc(16.66% - 1rem); /* Ensure six boxes fit in one row */
+    }
+}

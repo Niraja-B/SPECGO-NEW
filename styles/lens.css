@@ -1,0 +1,18 @@
+.lens-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Spacing between the images */
+    padding: 20px; /* Optional padding around the images */
+}
+
+.lens-image {
+    width: 700px; /* Increased the size of the images */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.lens-image:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
